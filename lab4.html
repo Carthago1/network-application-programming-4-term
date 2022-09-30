@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <title>lab 4</title>
+    <button onclick="Cliiic()">Клик</button> 
+</head>
+<body>
+<script>
+    $.getJSON({
+        url: 'https://api.vk.com/method/status.set?text=lololo&access_token=560d10354a04eb68a704ecee80e568250bb175bd2fa27f37e924b2a99ecf21f7d9fc52b7897760633c53f&v=5.131',
+        method: 'GET',
+        dataType: 'JSONP',
+        //success: function (data){
+        //    data.response == 1 ? document.write('Статус успешно установлен!') : document.write('Ошибка! Статус не установлен!');
+        //}
+    });
+    //$.getJSON({
+    //    url: 'https://api.vk.com/method/wall.post?friends_only=1&message=ololol&access_token=560d10354a04eb68a704ecee80e568250bb175bd2fa27f37e924b2a99ecf21f7d9fc52b7897760633c53f&v=5.131',
+    //    method: 'GET',
+    //    dataType: 'JSONP'
+    //});
+    function cliiic(){
+        $.getJSON({
+        url: 'https://api.vk.com/method/wall.post?friends_only=1&message=ololol&access_token=560d10354a04eb68a704ecee80e568250bb175bd2fa27f37e924b2a99ecf21f7d9fc52b7897760633c53f&v=5.131',
+        method: 'GET',
+        dataType: 'JSONP',
+        success: function(data){
+        $.getJSON({
+        url: 'https://api.vk.com/method/wall.post?friends_only=1&message=ololol&access_token=560d10354a04eb68a704ecee80e568250bb175bd2fa27f37e924b2a99ecf21f7d9fc52b7897760633c53f&v=5.131',
+        method: 'GET',
+        dataType: 'JSONP'
+        })
+        }})
+    }
+</script> 
+</body>
+</html>

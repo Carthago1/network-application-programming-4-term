@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>lab 5</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+<body>
+<script>
+
+//https://oauth.vk.com/authorize?client_id=8116904&display=page&redirect_uri=https://oauth.vk.com/blank.html&scope=wall,groups,offline&response_type=token&v=5.131
+//107dea3a915e3be1dc1978560715030068eddd7fc8871bd8cc00d6906fb00fe3b92f6e87988d72c448b94
+
+function req(method, params){
+    return new Promise((resolve, reject) => {
+      resolve($.getJSON({
+        url: 'https://api.vk.com/method/' + method + '?' + $.param(params) + '&access_token=vk1.a.sAD9b0Q_pGPiqrCkMFvipvePSZLWqBOdEhpVxXOBblDSdEPPKnc4xsQqCcZn720pcbTYQGjKzoc1OzU3GMxCCymFT8Ji8auv73qNapNqsfJ12ommEsTPmufJuCuUEroh5RkCTJdw7ugpJ_AKIFt4BoGmSHGV63LhpNM_1rAxpyqekhYENPfESz6ogojcYuau&v=5.131',
+        dataType: 'JSONP',
+        method: 'GET'
+      }));
+    })
+}
+
+async function crpost(){
+  let result = await req('wall.post', {
+    owner_id: 686222907,
+    message: await genmes()
+  })
+}
+
+async function genmes() {
+  let result = await gr()
+  let message = ''
+  for (var i = 0; i < result.response.items.length; i++) {
+    message += 'Название группы: ' + result.response.items[i].name + ', количество подписчиков: ' +
+     result.response.items[i].members_count + '\n'
+  }
+  return(message)
+}
+
+async function gr() {
+  const result = await req('groups.get', {
+    user_id: 686222907,
+    extended: 1, 
+    fields: 'members_count',
+    count: 5
+    })
+  return(result);
+}
+
+crpost();
+
+</script>
+</body>
+</html>

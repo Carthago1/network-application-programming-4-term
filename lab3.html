@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>lab 3</title>
+</head>
+<body>
+<!-- c0c21e283e601ef48983febb6a196eb7a1f61b1e64313173583654883ab4d7f86f57b064bf553b6221c9d -->
+<script src = "node_modules/jquery/dist/jquery.min.js"></script>
+<script>
+
+    /*
+    сначала зайти сюда, ввести клиент айди (айди приложения)
+    https://oauth.vk.com/authorize?client_id=8090020&display=page&redirect_uri=&scope=friends&response_type=token&v=5.81
+    скопировать url
+
+    https://oauth.vk.com/blank.html#access_token=431f8d36ef08d6bb79f04b46ea3ab9cfc53a3efafc4b16f193c81f5ab60db7e792057230ae400cd88aa5b&expires_in=86400&user_id=57626902
+    
+    implicit Flow token
+    00ce375a620570fe83a7164c5d64e1dbb204653fbf3aedb717ff6f6d4f71662a8dbc5eb8cb9f431720a61
+
+
+
+    */
+    
+    $.getJSON({
+        url: 'https://api.vk.com/method/friends.get?fields=online&order=random&name_case=ins&count=6&access_token=ca8e3b09f8b010c9bf4d0a34ae67c76ca125d558e7166f57da90c2261ceec2f57d917d1a5ccde78577f1b&v=5.81',
+        method: 'GET',
+        dataType: 'JSONP',
+        success: function(data){
+            for (let i = 0; i < 6; i++){
+                document.write(data.response.items[i]["first_name"] + " " + data.response.items[i]["online"] + "<br/>");
+            }
+        }
+    });
+
+    
+
+</script> 
+</body>
+</html>

@@ -1,0 +1,86 @@
+tea_shops {
+    background-color: lightgreen;
+    text-align: center;
+}
+title{
+    font-size: 30pt;
+    color:navy;
+    font-family: 'Times New Roman';
+    display: block;
+}
+address{
+    font-size: 20pt;
+    color:blueviolet;
+    font-family: 'Times New Roman';
+}
+working_mode{
+    display: block;
+    color: red;
+    font-size: 20;
+    font-family: 'Arial';
+}
+b{
+    font-weight: bold;
+}
+i{
+    font-style: italic;
+}
+tea1{
+    display: block;
+    color: yellow;
+    font-family: cursive;
+}
+tea2{
+    display: block;
+    color: darkolivegreen;
+    font-family: serif;
+}
+tea3{
+    display: block;
+    color: teal;
+    font-family: sans-serif;
+}
+tea4{
+    display: block;
+    font-family: monospace;
+}
+tea5{
+    display: block;
+    color: purple;
+    font-family: fantasy;
+}
+tea6{
+    display: block;
+    color: chocolate;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+tea7{
+    display: block;
+    color: rgb(70, 62, 16);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+tea8{
+    display: block;
+    color: darkblue;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+tea9{
+    display: block;
+    color: orange;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+tea10{
+    display: block;
+    color: seagreen;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+tea11{
+    display: block;
+    color: saddlebrown;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+tea12{
+    display: block;
+    color: olive;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}

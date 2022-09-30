@@ -1,0 +1,30 @@
+<html>
+<head>
+    <title>
+        lab_2
+    </title>
+</head>
+<body>
+    <script>
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', 'shop.xml', false);
+        xhr.send();
+        if ((xhr.status != 200) && (xhr.status != 0)) {
+            document.write(xhr.status + ': ' + xhr.statusText);
+        } else {
+            var value = xhr.responseXML.getElementsByTagName("tea_shops")
+            var value1 = value[0].getElementsByTagName("tea_shop")
+            for (var i = 0; i < value1.length; i++) {
+                var elements = value1[i].getElementsByTagName("items")                 
+                for (var j = 0; j < elements.length; j++) {
+                    var input = elements[j].getElementsByTagName("tea");                    
+                    for (var k = 0; k < input.length; k++){
+                        document.write(input[k].innerHTML + "<br/>");
+                    }
+                }
+                document.write("<br/>");
+            }
+        }
+    </script>
+</body>
+</html>

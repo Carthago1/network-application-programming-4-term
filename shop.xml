@@ -1,0 +1,47 @@
+<?pcml version = "1.0" encoding = "utf-8"?>
+<?xml-stylesheet type="text/css" href="shop.css"?>
+
+<!DOCTYPE tea_shop>
+<tea_shops>
+    <tea_shop>
+        <information> 
+            <title><b>Чай-кофе</b></title>
+            <address city = "Москва">Первомайская, 110</address>
+            <working_mode><i>09:00-21:00</i></working_mode>
+        </information>
+        <items>
+            <tea manufacturer = "Шри Ланка" sort = "Черный">Кимун</tea>
+            <tea manufacturer = "Индия" sort = "Черный">Ассамский чай</tea>
+            <tea manufacturer = "Индонезия" sort = "Черный">Цейлонский</tea>
+            <tea manufacturer = "Китай" sort = "Зелёный">Колодец дракона</tea>
+        </items>
+    </tea_shop>
+    
+    <tea_shop>
+        <information> 
+            <title><b>Море чая</b></title>
+            <address city = "Санкт-Петербург">Дыбенко, 22</address>
+            <working_mode><i>09:00-21:00</i></working_mode>
+        </information>
+        <items>
+            <tea manufacturer = "Китай" sort = "Зелёный">Ворсистые пики Желтых Гор</tea>
+            <tea manufacturer = "Китай" sort = "Зелёный">Свежесть бамбуковых листьев</tea>
+            <tea manufacturer = "Китай" sort = "Зелёный">Сладкая роса с пика Мэн Дин</tea>
+            <tea manufacturer = "Китай" sort = "Зелёный">Тыквенные семечки Лю Ань Гуа Пянь</tea>
+        </items>
+    </tea_shop>
+
+    <tea_shop>
+        <information> 
+            <title><b>Zavarka</b></title>
+            <address city = "Казань">Баумана, 51/50</address>
+            <working_mode><i>10:00-22:00</i></working_mode>
+        </information>
+        <items>
+            <tea manufacturer = "Турция" sort = "Черный">Риз</tea>
+            <tea manufacturer = "Иран" sort = "Черный">Лахиджан</tea>
+            <tea manufacturer = "Индия" sort = "Черный">Дарджилинг</tea>
+            <tea manufacturer = "Тайвань" sort = "Черный">Озеро Солнца и Луны</tea>
+        </items>
+    </tea_shop>
+</tea_shops>
